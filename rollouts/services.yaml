@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-active
+  namespace: dev
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: nginx-rollout
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-preview
+  namespace: dev
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: nginx-rollout
