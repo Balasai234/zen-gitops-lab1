@@ -2,7 +2,7 @@ replicaCount: 1
 fullnameOverride: auth-service
 image:
   repository: 243746944939.dkr.ecr.us-east-1.amazonaws.com/auth-service
-  tag: sha-82f3d07
+  tag: sha-d4c7509
   pullPolicy: Always
 service:
   type: ClusterIP
@@ -44,7 +44,7 @@ readinessProbe:
   successThreshold: 1
 configmap:
   SPRING_PROFILES_ACTIVE: dev
-  DB_HOST: pharma-dev-postgres.cupgoqko4dpc.us-east-1.rds.amazonaws.com:5432
+  DB_HOST: pharma-dev-postgres.cupgoqko4dpc.us-east-1.rds.amazonaws.com
   LOG_LEVEL: DEBUG
   SERVER_PORT: "8081"
   TOKEN_EXPIRATION_MS: "86400000"
